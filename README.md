@@ -14,3 +14,13 @@ You must implement the following trait for each model that you want to be versio
 * History_Traits_Model_DbTable_Row_Interface
 
 # How to show/restore
+
+Edit your row, at the right you will see the different version of this row.
+You can add tag to version if you want to find one quickly or delete some.
+
+# TODO
+
+* add test unit
+* add pagination in version
+* maybe allow mass delete with checkbox
+* restore ticket to protect version
