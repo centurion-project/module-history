@@ -1,9 +1,6 @@
 <?php
 class History_Traits_Form_Model extends Centurion_Traits_Form_Model_Abstract
 {
-
-    protected $_isTranslation = false;
-
     public function init()
     {
         Centurion_Signal::factory('pre_generate')->connect(array($this, 'preGenerate'), $this->_form);
