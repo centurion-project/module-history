@@ -1,9 +1,16 @@
 <?php
 
+/**
+ * @TODO: we should disabled index action
+ */
 class History_AdminLogController extends Centurion_Controller_CRUD
 {
     protected $_formClassName = 'History_Form_Model_Log';
 
+    /**
+     * @todo: this should be removed. It's a bug. Ticket generating in trait controller crud is not working.
+     * @var bool
+     */
     protected $_useTicket = false;
 
     public function preDispatch()
@@ -21,6 +28,7 @@ class History_AdminLogController extends Centurion_Controller_CRUD
         $this->view->noAddButton = true;
 
         $this->_displays = array (
+
         );
 
         $this->_filters = array (

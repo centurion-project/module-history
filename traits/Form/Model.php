@@ -22,8 +22,6 @@ class History_Traits_Form_Model extends Centurion_Traits_Form_Model_Abstract
 
     public function populateWithInstance()
     {
-
-
         $this->_form->addElement('info', 'history');
 
         $row = $this->_form->getInstance();
@@ -43,6 +41,9 @@ class History_Traits_Form_Model extends Centurion_Traits_Form_Model_Abstract
         $str = '<ul>';
 
         $view = $this->_form->getView();
+
+        $link = $view->url(array('action' => 'get', 'restoreId' => null));
+        $str .= '<li><a href="' . $link . '">Original</a><br /><br /></li>';
 
         foreach ($versionRowSet as $version) {
             $link = $view->url(array('action' => 'restore', 'restoreId' => $version->id));
