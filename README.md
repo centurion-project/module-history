@@ -24,3 +24,4 @@ You can add tag to version if you want to find one quickly or delete some.
 * add pagination in version
 * maybe allow mass delete with checkbox
 * restore ticket to protect version
+* store the user_id
